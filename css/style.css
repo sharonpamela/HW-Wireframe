@@ -1,0 +1,98 @@
+.wrapper {
+    display: flex;  
+    flex-flow: row wrap;
+    font-weight: bold;
+    text-align: center;
+    /* align-items: center; */
+    max-width: 960px;
+}
+
+.wrapper > * {
+    padding: 10px;
+    flex: 1 100%;
+}
+
+body{
+    font-family: 'Arial', 'Helvetica Neue', 'Helvetica', 'sans-serif';
+    color: #777;
+    background: #777;
+    font-size: 18px;
+}
+
+header, nav, .main-section, aside, footer{
+    background: #ebebeb;
+}
+
+.main-section{
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+}
+
+.article {
+    color: #ebebeb;
+    background: #777;
+    max-width: 495px;
+    box-sizing: border-box;
+}
+
+.aside{
+    max-width: 460px;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, p {
+    color: #777;
+    background: #ebebeb;
+}
+
+.header {
+    background: tomato;
+}
+
+.main-section {
+    background: deepskyblue;
+}
+
+.article{
+    text-align: left;
+}
+
+.aside{
+    background: gold;
+}
+
+.footer {
+    background: lightgreen;
+}
+
+@media all and (min-width: 600px) {
+  .aside { flex: 1  0; }
+}
+
+/* Medium screens */
+@media all and (min-width: 600px) {
+    /* We tell both sidebars to share a row */
+    .aside { flex: 1 auto; }
+  }
+  
+/* Large screens */
+@media all and (min-width: 800px) {
+  /* 
+   */
+  .header { order: 1; }
+  .navbar { order: 2; }
+  .main-section { order: 3; }
+  /* .main-section { flex: 2 0px; }  main element takes twice as much width as the sidebar???*/
+  .aside{ order: 4; }
+  .footer  { order: 5; }
+}
+
+
+  /* We tell all items to be 100% width, via flex-basis */
+  /* .wrapper > * {
+    flex: 1 100%;
+  } */
+  
+
+  
